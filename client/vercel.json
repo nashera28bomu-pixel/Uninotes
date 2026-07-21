@@ -3,6 +3,6 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/", "destination": "/src/pages/index.html" },
-    { "source": "/:page", "destination": "/src/pages/:page.html" }
+    { "source": "/:page", "destination": "/src/pages/:page" }
   ]
 }
