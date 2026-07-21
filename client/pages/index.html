@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CymorUniNotes - Notes for Computer Science &amp; Medicine</title>
+<meta name="description" content="Browse, preview, and download well-explained university notes for Computer Science and Medicine and Surgery, aligned with Kenyan university syllabi." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css" />
+<script>
+  // Set theme before paint to avoid a flash of the wrong theme.
+  document.documentElement.setAttribute('data-theme', localStorage.getItem('cymor-theme') || 'dark');
+</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav__row container">
+    <a href="index.html" class="brand" aria-label="CymorUniNotes home">
+      <span class="brand__cymor">Cymor</span><span class="brand__uni">Uni</span><span class="brand__notes">Notes</span>
+    </a>
+    <form class="search-form" data-search-form role="search">
+      <label class="search-form__field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Search notes, subjects, courses..." aria-label="Search" />
+      </label>
+    </form>
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark/light theme">🌓</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero container">
+    <span class="hero__eyebrow"><span class="dot"></span> Built for Kenyan university students</span>
+    <h1>Two fields. <span class="accent-teal">One</span> <span class="accent-coral">pulse</span> of learning.</h1>
+    <p class="hero__sub">Well-explained, openly-licensed notes for Computer Science and Medicine and Surgery — browse by course, preview in your browser, download for offline study.</p>
+
+    <form class="hero__search search-form" data-search-form role="search">
+      <label class="search-form__field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" placeholder="Try 'Data Structures' or 'Human Anatomy'" aria-label="Search" />
+      </label>
+    </form>
+
+    <div class="pulse-divider" aria-hidden="true">
+      <svg viewBox="0 0 1600 100" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="pulseGrad" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#4fd1c5" />
+            <stop offset="35%" stop-color="#4fd1c5" />
+            <stop offset="55%" stop-color="#ff6b5b" />
+            <stop offset="100%" stop-color="#ff6b5b" />
+          </linearGradient>
+        </defs>
+        <polyline fill="none" stroke="url(#pulseGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+          points="0,43 20,57 40,43 60,57 80,43 100,57 120,43 140,57 160,43 180,57 200,43 220,57 240,43 260,57 260,50 300,53 340,40 380,64 420,50 440,50 455,40 470,50 485,56 495,-5 505,82 520,50 545,34 565,50 620,50 800,50 800,43 820,57 840,43 860,57 880,43 900,57 920,43 940,57 960,43 980,57 1000,43 1020,57 1040,43 1060,57 1060,50 1100,53 1140,40 1180,64 1220,50 1240,50 1255,40 1270,50 1285,56 1295,-5 1305,82 1320,50 1345,34 1365,50 1420,50 1600,50" />
+      </svg>
+    </div>
+  </section>
+
+  <section class="section section--tight container">
+    <div class="section__head">
+      <h2>Choose your field</h2>
+    </div>
+    <div id="course-grid" class="course-grid">
+      <div class="skeleton skeleton--course"></div>
+      <div class="skeleton skeleton--course"></div>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="section__head">
+      <h2>Recently added</h2>
+      <span class="section__hint">Freshly imported notes</span>
+    </div>
+    <div id="recent-resources" class="resource-scroll">
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+    </div>
+  </section>
+
+  <section class="section section--tight container">
+    <div class="section__head">
+      <h2>Popular notes</h2>
+      <span class="section__hint">Most viewed &amp; downloaded</span>
+    </div>
+    <div id="popular-resources" class="resource-scroll">
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+      <div class="skeleton skeleton--card" style="min-width:250px"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__row">
+    <span class="footer__brand">CymorUniNotes</span>
+    <span>Built by Legendary Smiley Cymor · Cymor Tech Services</span>
+  </div>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/theme.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/nav.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
